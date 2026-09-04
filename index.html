@@ -2,13 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Joy Boy Studio | Barber in Denton, TX</title>
     <meta name="description" content="Precision haircuts, fades, beard work, and lineups by Laylow at Joy Boy Studio in Denton, Texas. Book through Booksy." />
     <meta name="theme-color" content="#050606" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="icon" href="assets/joyboy-logo.webp" type="image/webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&amp;family=Karla:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="assets/laylow-at-work.webp" fetchpriority="high" />
     <link rel="stylesheet" href="styles.css" />
     <script>document.documentElement.classList.add('js');</script>
     <script type="application/ld+json">
@@ -35,140 +38,124 @@
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-
-    <header class="site-header">
+    <header class="site-header" id="site-header">
       <a class="brand" href="#top" aria-label="Joy Boy Studio home">
         <img src="assets/joyboy-logo.webp" alt="" width="229" height="237" />
-        <span>JOY BOY<small>STUDIO</small></span>
+        <span>Joy Boy Studio</span>
       </a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">
-        <span></span><span></span><b class="sr-only">Open menu</b>
-      </button>
-      <nav id="site-menu" class="site-menu" aria-label="Main navigation">
-        <a href="#work">Cuts</a><a href="#services">Menu</a><a href="#reviews">Reviews</a><a href="#visit">Find us</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#studio">Studio</a><a href="#work">Work</a><a href="#services">Services</a><a href="#visit">Visit</a>
       </nav>
-      <a class="header-book" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">Book a chair <span>↗</span></a>
+      <a class="button button-small" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">Book now</a>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-media">
+        <div class="hero-photo" data-depth="0.12">
           <img src="assets/laylow-at-work.webp" alt="Laylow cutting a client's hair inside Joy Boy Studio" width="1000" height="549" />
         </div>
-        <div class="hero-content">
-          <div class="hero-copy">
-            <p class="hero-kicker">Joy Boy Studio <span>Denton, Texas</span></p>
-            <h1 id="hero-title">Cut with<br />intention.</h1>
-            <p class="hero-lede">Precision barbering by Laylow, built around your texture, your style, and how you want to show up.</p>
-            <div class="hero-actions">
-              <a class="action action-cyan" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">Book with Laylow <span>↗</span></a>
-              <a class="hero-work-link" href="#work">See the work <span>↓</span></a>
+        <div class="hero-glow" data-depth="0.24" aria-hidden="true"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-inner" data-depth="0.2">
+          <p class="eyebrow hero-eyebrow">Private barber studio · Denton, Texas</p>
+          <h1 id="hero-title">Joy Boy<br /><em>Studio</em></h1>
+          <p class="hero-copy">Precision barbering by Laylow. One chair, one appointment, and every detail handled with intention.</p>
+          <div class="hero-actions">
+            <a class="button button-large" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">Book on Booksy</a>
+            <a class="button button-quiet button-large" href="#work">View the work</a>
+          </div>
+          <a class="rating" href="https://booksy.com/en-us/618207_laylow-joy-boy-studio_barber-shop_36535_denton" target="_blank" rel="noreferrer" aria-label="Rated 4.9 out of 5 from 294 Booksy reviews">
+            <span class="rating-stars" aria-hidden="true">★★★★★</span>
+            <span><strong>4.9</strong> from 294 reviews on Booksy</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="studio-section" id="studio">
+        <div class="wrap studio-grid">
+          <div class="section-heading reveal"><p class="eyebrow">The studio</p><h2>Your time.<br />Your chair.</h2></div>
+          <div class="studio-copy reveal">
+            <p class="lead">Joy Boy Studio is Laylow’s private barber suite on Dallas Drive in Denton.</p>
+            <p>Appointments are handled one at a time, giving every cut room for the blend, shape, lineup, and finishing details to be done right.</p>
+            <dl class="studio-facts">
+              <div><dt>Barber</dt><dd>Laylow</dd></div>
+              <div><dt>Booking</dt><dd>By appointment</dd></div>
+              <div><dt>Location</dt><dd>Denton, Texas</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="work-section" id="work">
+        <div class="wrap">
+          <div class="work-intro reveal">
+            <div><p class="eyebrow">Selected work</p><h2>Fresh from<br />the chair.</h2></div>
+            <p>Real clients. Real cuts. Every photo came out of the Joy Boy chair.</p>
+          </div>
+          <div class="portfolio">
+            <figure class="portfolio-main reveal"><img src="assets/cut-fade.webp" alt="Clean fade with a sharp front lineup by Laylow" width="611" height="1083" loading="lazy" /><figcaption>Clean fade</figcaption></figure>
+            <figure class="portfolio-wide reveal"><img src="assets/cut-curls.webp" alt="Curly textured crop with a smooth fade by Laylow" width="1000" height="997" loading="lazy" /><figcaption>Curly crop</figcaption></figure>
+            <figure class="portfolio-small reveal"><img src="assets/cut-braids.webp" alt="Braids with a clean taper and lineup by Laylow" width="540" height="542" loading="lazy" /><figcaption>Braid taper</figcaption></figure>
+            <figure class="portfolio-small portfolio-offset reveal"><img src="assets/cut-beard.webp" alt="Detailed beard shaping and lineup by Laylow" width="1000" height="998" loading="lazy" /><figcaption>Beard detail</figcaption></figure>
+          </div>
+          <a class="instagram-callout reveal" href="https://www.instagram.com/_joyboystudio/" target="_blank" rel="noreferrer"><span>More cuts on Instagram</span><strong>@_joyboystudio</strong><b aria-hidden="true">↗</b></a>
+        </div>
+      </section>
+
+      <section class="services-section" id="services">
+        <div class="wrap services-grid">
+          <div class="services-heading reveal">
+            <p class="eyebrow">Services</p><h2>Choose your<br /><em>appointment.</em></h2>
+            <p>Booksy shows Laylow’s current availability.</p>
+            <a class="text-link" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">See all availability ↗</a>
+          </div>
+          <div class="service-list">
+            <a class="service reveal" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer"><span class="service-number">01</span><div><h3>Haircut</h3><p>Full cut, styling, and straight razor finish.</p></div><div class="service-meta"><strong>$40</strong><span>45 min</span></div></a>
+            <a class="service reveal" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer"><span class="service-number">02</span><div><h3>Cut + beard</h3><p>Hot towel, beard work, styling, and razor finish.</p></div><div class="service-meta"><strong>$60</strong><span>55 min</span></div></a>
+            <a class="service reveal" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer"><span class="service-number">03</span><div><h3>Tha Works</h3><p>Cut, beard, facial, hot towel, steamer, and styling.</p></div><div class="service-meta"><strong>$85+</strong><span>80 min</span></div></a>
+            <a class="service reveal" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer"><span class="service-number">04</span><div><h3>Lineup</h3><p>Bring the shape back between full cuts.</p></div><div class="service-meta"><strong>$20</strong><span>20 min</span></div></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews-section" id="reviews">
+        <div class="wrap">
+          <div class="review-heading reveal"><p class="eyebrow">From the chair</p><h2>294 reasons<br />to trust the work.</h2><p><strong>4.9</strong> average rating on Booksy</p></div>
+          <div class="reviews-grid">
+            <blockquote class="reveal"><p>“Best haircut in Denton!!”</p><footer>Corey · Confirmed Booksy client</footer></blockquote>
+            <blockquote class="reveal"><p>“Laylow was great. Gave me exactly what I wanted. Extremely professional and personable.”</p><footer>Patrick · Confirmed Booksy client</footer></blockquote>
+            <blockquote class="reveal"><p>“The service was excellent, and the place was very clean.”</p><footer>Erick · Confirmed Booksy client</footer></blockquote>
+          </div>
+          <a class="text-link review-link reveal" href="https://booksy.com/en-us/618207_laylow-joy-boy-studio_barber-shop_36535_denton" target="_blank" rel="noreferrer">Read all Booksy reviews ↗</a>
+        </div>
+      </section>
+
+      <section class="visit-section" id="visit">
+        <div class="visit-glow" data-depth="0.08" aria-hidden="true"></div>
+        <div class="wrap visit-grid">
+          <div class="visit-copy reveal">
+            <p class="eyebrow">Pull up</p><h2>301 Dallas Dr.<br /><em>Suite 108.</em></h2><address>Denton, Texas 76205</address>
+            <div class="visit-actions"><a class="button button-large" href="https://www.google.com/maps/dir/?api=1&amp;destination=301%20Dallas%20Dr%20%23108%2C%20Denton%2C%20TX%2076205" target="_blank" rel="noreferrer">Get directions</a><a class="button button-quiet button-large" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">Book a chair</a></div>
+          </div>
+          <div class="hours-card reveal">
+            <p class="eyebrow">Studio hours</p>
+            <div class="hours" id="hours-list">
+              <div data-day="1"><span>Monday</span><span>Closed</span></div><div data-day="2"><span>Tuesday</span><span>9:30 AM · 7:00 PM</span></div><div data-day="3"><span>Wednesday</span><span>9:30 AM · 7:00 PM</span></div><div data-day="4"><span>Thursday</span><span>9:30 AM · 7:00 PM</span></div><div data-day="5"><span>Friday</span><span>9:30 AM · 7:00 PM</span></div><div data-day="6"><span>Saturday</span><span>10:00 AM · 5:00 PM</span></div><div data-day="0"><span>Sunday</span><span>Closed</span></div>
             </div>
-          </div>
-          <div class="hero-rating" aria-label="Rated 4.9 out of 5 from 294 Booksy reviews">
-            <strong>4.9</strong>
-            <span aria-hidden="true">★★★★★</span>
-            <p>294 Booksy reviews</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="manifesto" aria-label="Joy Boy Studio approach">
-        <p class="manifesto-label">The standard</p>
-        <p class="manifesto-copy">A clean cut should look right <em>before</em> the enhancement and stay right after it.</p>
-        <p class="manifesto-note">No borrowed pictures. Every cut on this page came out of the Joy Boy chair.</p>
-      </section>
-
-      <section class="work" id="work">
-        <div class="work-heading reveal">
-          <p class="section-number">01</p><h2>Fresh from<br />the chair.</h2><p class="section-note">Selected work by Laylow</p>
-        </div>
-        <div class="cut cut-one reveal">
-          <img src="assets/cut-fade.webp" alt="Clean fade with a sharp front lineup" width="611" height="1083" loading="lazy" />
-          <div><span>01</span><p>Clean fade</p></div>
-        </div>
-        <div class="cut cut-two reveal">
-          <img src="assets/cut-curls.webp" alt="Curly textured top with a smooth fade" width="1000" height="997" loading="lazy" />
-          <div><span>02</span><p>Curly crop</p></div>
-        </div>
-        <p class="work-statement reveal">The blend should disappear.<br />The shape should not.</p>
-        <div class="cut cut-three reveal">
-          <img src="assets/cut-braids.webp" alt="Braided style with a clean taper and lineup" width="540" height="542" loading="lazy" />
-          <div><span>03</span><p>Braid taper</p></div>
-        </div>
-        <div class="cut cut-four reveal">
-          <img src="assets/cut-beard.webp" alt="Detailed beard shaping and sharp lineup" width="1000" height="998" loading="lazy" />
-          <div><span>04</span><p>Beard detail</p></div>
-        </div>
-        <a class="work-instagram reveal" href="https://www.instagram.com/_joyboystudio/" target="_blank" rel="noreferrer">
-          <span>More cuts</span><strong>@_joyboystudio</strong><b>↗</b>
-        </a>
-      </section>
-
-      <section class="services" id="services">
-        <div class="services-title reveal">
-          <p class="section-number">02</p><h2>The menu.</h2><p>Live availability stays on Booksy.</p>
-        </div>
-        <div class="service-list">
-          <a class="service reveal" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">
-            <span class="service-index">01</span><div><h3>Haircut</h3><p>Full cut, styling, and straight razor finish.</p></div><span class="service-time">45 min</span><strong>$40</strong><b>↗</b>
-          </a>
-          <a class="service reveal" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">
-            <span class="service-index">02</span><div><h3>Cut + beard</h3><p>Hot towel, beard work, styling, and razor finish.</p></div><span class="service-time">55 min</span><strong>$60</strong><b>↗</b>
-          </a>
-          <a class="service reveal" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">
-            <span class="service-index">03</span><div><h3>Tha Works</h3><p>Cut, beard, facial, hot towel, steamer, and styling.</p></div><span class="service-time">80 min</span><strong>$85+</strong><b>↗</b>
-          </a>
-          <a class="service reveal" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">
-            <span class="service-index">04</span><div><h3>Lineup</h3><p>Bring the shape back between full cuts.</p></div><span class="service-time">20 min</span><strong>$20</strong><b>↗</b>
-          </a>
-        </div>
-      </section>
-
-      <section class="studio">
-        <div class="studio-photo reveal">
-          <img src="assets/cut-textured.webp" alt="Textured high top and clean fade cut by Laylow" width="610" height="1081" loading="lazy" />
-          <img class="studio-mark" src="assets/joyboy-logo.webp" alt="" width="229" height="237" loading="lazy" />
-        </div>
-        <div class="studio-copy reveal">
-          <p class="section-number">03 / The barber</p><h2>Focused in<br />the chair.</h2>
-          <p>Laylow takes the time to read the head shape, work with the texture, and finish every detail clean.</p>
-          <a class="text-link" href="https://www.instagram.com/laylow_530/" target="_blank" rel="noreferrer">Follow @laylow_530 <span>↗</span></a>
-        </div>
-      </section>
-
-      <section class="reviews" id="reviews">
-        <div class="review-score reveal">
-          <span>Booksy verified</span><strong>4.9</strong><p><b aria-hidden="true">★★★★★</b> 294 reviews</p>
-        </div>
-        <div class="review-copy reveal">
-          <p class="section-number">04 / Word from the chair</p>
-          <blockquote>“Extremely professional and personable.”</blockquote>
-          <div class="review-notes"><span>“Always a five star experience.”</span><span>“Love the new studio!”</span></div>
-          <a class="text-link dark" href="https://booksy.com/en-us/618207_laylow-joy-boy-studio_barber-shop_36535_denton" target="_blank" rel="noreferrer">Read all reviews <span>↗</span></a>
-        </div>
-      </section>
-
-      <section class="visit" id="visit">
-        <img class="visit-mark" src="assets/joyboy-logo.webp" alt="" width="229" height="237" loading="lazy" />
-        <p class="section-number">05 / Pull up</p><h2>301<br />Dallas Dr.</h2>
-        <div class="visit-details">
-          <address>Suite 108<br />Denton, TX 76205</address>
-          <div>
-            <a class="action action-black" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">Book the appointment <span>↗</span></a>
-            <a class="directions" href="https://www.google.com/maps/search/?api=1&amp;query=301+Dallas+Dr+Suite+108+Denton+TX+76205" target="_blank" rel="noreferrer">Get directions ↗</a>
+            <p class="hours-note">Booksy shows live availability.</p>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <a class="footer-brand" href="#top"><img src="assets/joyboy-logo.webp" alt="Joy Boy Studio" width="229" height="237" loading="lazy" /></a>
-      <p>JOY BOY STUDIO<br /><span>Denton, Texas</span></p>
-      <div><a href="https://www.instagram.com/_joyboystudio/" target="_blank" rel="noreferrer">Instagram</a><a href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">Booksy</a></div>
-      <small>© <span data-year></span> Joy Boy Studio</small>
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div><a class="brand footer-brand" href="#top"><img src="assets/joyboy-logo.webp" alt="" width="229" height="237" loading="lazy" /><span>Joy Boy Studio</span></a><p>Precision barbering by Laylow in Denton, Texas.</p></div>
+        <nav aria-label="Social links"><a href="https://www.instagram.com/_joyboystudio/" target="_blank" rel="noreferrer">Studio Instagram</a><a href="https://www.instagram.com/laylow_530/" target="_blank" rel="noreferrer">Laylow Instagram</a><a href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">Booksy</a></nav>
+        <p class="copyright">© <span data-year></span> Joy Boy Studio</p>
+      </div>
     </footer>
-    <a class="mobile-book" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">Book a chair <span>↗</span></a>
+    <a class="mobile-book" href="https://laylowthabarber.booksy.com/a/" target="_blank" rel="noreferrer">Book with Laylow <span>↗</span></a>
     <script src="script.js"></script>
   </body>
 </html>
