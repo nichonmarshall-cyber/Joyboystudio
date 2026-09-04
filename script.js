@@ -16,3 +16,22 @@ menu?.querySelectorAll('a').forEach((link) => {
 
 const year = document.querySelector('[data-year]');
 if (year) year.textContent = String(new Date().getFullYear());
+
+const header = document.querySelector('.site-header');
+const setHeaderState = () => header?.classList.toggle('scrolled', window.scrollY > 24);
+setHeaderState();
+window.addEventListener('scroll', setHeaderState, { passive: true });
+
+const revealItems = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add('visible'));
+}
